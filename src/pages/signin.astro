@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+import AriaSubmitButton from '../components/AriaSubmitButton.jsx';
+import AriaTextField from '../components/AriaTextField.jsx';
+
+---
+<Layout title="Sign In">
+    <h1>Sign In</h1>
+    <form>
+        <div>
+          <AriaTextField label="email" id="email" type="email" />
+        </div>
+    
+        <div>
+          <AriaTextField label="password" id="password" type="password" description="Must be at least 8 characters." />
+        </div>
+    
+        <AriaSubmitButton client:load />
+      </form>
+</Layout>

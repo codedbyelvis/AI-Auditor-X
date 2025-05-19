@@ -1,10 +1,12 @@
 import React from 'react';
-import { TextField, Label, Input } from 'react-aria-components';
+import { TextField, Label, Input, Text } from 'react-aria-components';
 
-function AriaTextField() {
+function AriaTextField({ label, type, id, description, ...props }) {
   return (
-    <TextField>
-      <Input aria-label='Your content' placeholder="Type here..." />
+    <TextField {...props}>
+      <Label>{label}</Label>
+      <Input id={id} type={type} placeholder="Type here..." />
+      {description && <Text slot="description">{description}</Text>}
     </TextField>
   );
 }

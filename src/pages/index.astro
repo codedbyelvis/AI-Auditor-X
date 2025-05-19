@@ -1,26 +1,19 @@
 ---
+import Layout from '../layouts/Layout.astro';
 import AriaTextField from '../components/AriaTextField.jsx';
 import AriaFileTrigger from '../components/AriaFileTrigger.jsx';
-import Layout from '../layouts/Layout.astro';
 import AriaSubmitButton from '../components/AriaSubmitButton.jsx';
 
 ---
-
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Auditor X</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="" />
-  <link rel="icon" href="favicon.png">
-  <meta name="generator" content={Astro.generator} />
-</head>
-<body>
+<Layout title="Auditor X">
   <h1>Auditor X</h1>
-  <AriaTextField />
-  <AriaFileTrigger client:load >
-    <button />
-  </AriaFileTrigger>
-  <AriaSubmitButton client:load />
-</body>
-</html>
+  <h2>Improve your readability and ranking!</h2>
+  <h4>Type or upload your text. Auditor X will read, score, and improv your work!</h4>
+  <form>
+    <AriaTextField />
+    <AriaFileTrigger client:load >
+      <button />
+    </AriaFileTrigger>
+    <AriaSubmitButton client:load />
+  </form>
+</Layout>
